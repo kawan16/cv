@@ -1,0 +1,385 @@
+
+/* GLOBAL */
+
+body {  font-family: 'Lato', sans-serif; color:#627076; background-color:  #ccc; overflow: scroll; }
+@media not print {
+	body {
+	padding-top:40px;
+	}
+}
+
+h1 { font-size: 36px;}
+h2 { font-size: 24px;}
+h3 { font-size: 20px;}
+h4 { font-size: 18px;}
+p { font-size: 14px; line-height: 150%;}
+
+/*
+
+/* CONTAINER */
+.container {
+    background-color: white;
+    min-height: 100%;
+}
+
+@media only screen and (min-width: 8.2in) {
+    .container {
+		background-color:white;
+		width:10in;
+		padding:0.5in;
+		margin:30px auto;
+		box-shadow:0 0 100px #AAA, 0 0 10px #ffd;
+	}
+}
+
+/* HEADER */
+
+#header { position: relative; border: 1px solid rgba(154, 154, 154, 0.46); background-color: rgba(248, 248, 248, 1); border-radius: 5px;margin: auto; width: 210mm;height: 56mm; margin-top: 20px;}
+#header #picture { position: absolute; top: 8mm; left: 8mm; }
+#header #picture img { border-radius: 50%;border: 1px solid rgba(154, 154, 154, 0.46); }
+#header #identity { position: absolute; top: 8mm; left: 55mm;}
+#header #identity h1 { margin-top: 6mm; margin-bottom:8mm; }
+#header #identity h2 { color: rgb(114, 171, 0) !important; }
+#header #identity .after { display:none; }
+#header #contact { position: absolute; top: 8mm; right: 5mm; }
+#header #contact h4 { margin-top: 5mm; }
+#header #contact h4 i { margin-right: 2mm; }
+
+/* Professional Experience */
+
+#experience { position: relative; margin: auto; width: 210mm; margin-top: 40px;  }
+#experience section { position:relative; }
+
+#experience .head  { padding-bottom: 3mm; }
+#experience .head .company { margin: 3mm 0; }
+#experience .head .role { color: rgb(114, 171, 0); margin-bottom: 2mm; }
+
+#experience .content { padding-bottom: 3mm; }
+#experience .content .duties { padding-left: 25px;}
+#experience .content .duties ul { list-style-type: square;}
+#experience .content .duties p { font-size: 15px;}
+
+#education { position: relative; margin: auto; width: 210mm; margin-top: 40px; }
+#education section { position:relative; }
+#education section > h4:nth-child(1) { margin-bottom: 3mm; }
+#education section > h4:nth-child(2) { color: rgb(114, 171, 0); margin-bottom: 2mm; }
+#education section > h4:nth-child(3) { position: absolute; top:0mm;right:0; margin-right: 5mm }
+#education section > p {text-shadow: none; }
+
+#education .diploma { display: table; width: 100%; margin: 5mm 0; }
+#education .diploma section { display: table-cell; width: 50%; }
+
+#skills { position: relative; margin: auto; width: 210mm; margin-top: 40px;}
+
+#skills table  { width:100%; margin-top: 5mm;}
+#skills table td { padding: 2mm;}
+#skills table .skill { margin-top: 40px; width:25%; }
+#skills table .skill > div { background-color: #c4cbd4;height:8mm;margin-right:1mm;margin-bottom: 3mm;}
+#skills table .skill > div > div { background-color: rgb(114, 171, 0); height:8mm; padding: 2mm; color: white;}
+
+#skills #lifecycle { width: 100%;}
+#skills #defanalysis { width: 100%;  background-color: #627076;}
+#skills #building { width: 100%; }
+#skills #budgeting { width: 100%; background-color: #627076;}
+#skills #requirement { width: 100%; background-color: #627076; }
+#skills #schedule { width: 100%;  }
+#skills #agile { width: 100%; background-color: #627076;}
+
+#skills #html5 { width: 100%;}
+#skills #mithril { width: 100%;  background-color: #627076;}
+#skills #angular { width: 100%; }
+#skills #react { width: 100%; background-color: #627076;}
+#skills #grunt { width: 100%; }
+#skills #sass { width: 100%; background-color: #627076; }
+
+#skills #javascript { width: 100%;  background-color: #627076;}
+#skills #nodejs { width: 100%; }
+#skills #jira { width:100%; background-color: #627076;}
+#skills #git { width: 100%; }
+#skills #sonar { width: 100%; background-color: #627076; }
+#skills #jenkins { width: 100%;}
+
+#skills #java { width: 100%;}
+#skills #spring { width: 100%;  background-color: #627076;}
+#skills #springboot { width: 100%; }
+#skills #hibernate { width: 100%; background-color: #627076;}
+#skills #intellij { width: 100%; }
+#skills #dbunit { width: 100%; background-color: #627076; }
+
+#skills #oracle { width: 100%;  background-color: #627076;}
+#skills #postgresql { width: 100%; }
+#skills #mongodb { width: 100%; background-color: #627076;}
+#skills #redis { width: 100%; }
+#skills #microsql { width: 100%; background-color: #627076; }
+
+#skills #semantics { width: 100%;}
+#skills #datafusion { width: 100%;  background-color: #627076;}
+#skills #mas { width: 100%; }
+#skills #knowledge { width: 100%; background-color: #627076;}
+#skills #datamining { width: 100%; background-color: #627076;}
+#skills #nlp { width: 100%;  }
+#skills #recommender { width: 100%; background-color: #627076;}
+
+.skillUp {animation: skillUp 3s linear 0s;}
+
+#languages { position: relative; margin: auto; width: 210mm; margin-top: 40px;}
+
+#work-details { position: relative; margin: auto; width: 210mm; margin-top: 40px;}
+#work-details .head .role { color: rgb(114, 171, 0); margin-bottom: 2mm; }
+#work-details p { text-align: justify }
+
+.highlight { height:10px; width: 100%; border-bottom: 1px solid black; }
+.overlay { color: white; background-color: #627076;padding: 1mm; border-radius: 5px; padding: 5px;}
+
+.cloud-right {display:flex; flex-direction: row; flex-wrap: wrap;}
+.cloud-left {display:flex; flex-direction: row; flex-wrap: wrap;-webkit-justify-content: flex-end; justify-content: flex-end;}
+.tag { color: white; background-color: rgb(114, 171, 0);padding: 1mm; margin: 1mm; border-radius: 5px; font-size: 14px}
+
+/* BUTTON */
+
+.button {
+    position. relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(114, 171, 0);
+    background-color: white;
+    box-shadow:0 0 100px #AAA, 0 0 10px #ffd;
+}
+
+.button a {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: rgb(114, 171, 0);
+}
+
+
+/* MENU */
+
+.menu-band {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    opacity: 0.6;
+}
+
+.menu {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.blacken {
+    animation: blacken 1s linear 0s;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+    -moz-animation-fill-mode:forwards; /*FF 5+*/
+    -o-animation-fill-mode:forwards; /*Not implemented yet*/
+    -ms-animation-fill-mode:forwards; /*IE 10+*/
+    animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+
+/* SCROLL */
+
+::-webkit-scrollbar { display: none;}
+
+.scroll {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(114, 171, 0);
+    background-color: white;
+    opacity: 0.8;
+    box-shadow:0 0 100px #AAA, 0 0 10px #ffd;
+}
+
+.scroll i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: rgb(114, 171, 0);
+}
+
+.scroll.up {
+    position: fixed;
+    top: 100px;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.scroll.down {
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.scroll.active {
+    visibility: visible;
+}
+
+.scroll.running {
+     box-shadow:0 0 20px rgb(114, 171, 0), 0 0 1px #ffd;
+}
+
+/* ROTATE WORDS */
+
+.rotate-words{
+	display: inline;
+}
+
+.rotate-words h2{
+	opacity: 0;
+	position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+.rotate-words.effect h2 {
+	animation: rotateWords 15s linear infinite 0s;
+	margin-top: 5px;
+}
+
+.rotate-words h2:nth-child(2) {
+	animation-delay: 3s;
+}
+.rotate-words h2:nth-child(3) {
+	animation-delay: 6s;
+}
+.rotate-words h2:nth-child(4) {
+	animation-delay: 9s;
+}
+.rotate-words h2:nth-child(5) {
+	animation-delay: 12s;
+}
+
+/* PIE CHART */
+
+.pie-container {
+  width: 150px;
+  height: 150px;
+}
+
+.pie-background {
+  overflow: hidden;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.pie-mask {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pie-text {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pie-right {
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+}
+
+.pie-left {
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  margin-right: 50%;
+}
+
+.pie-slice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.color-green {
+  background-color: rgb(114, 171, 0);;
+}
+
+.rotate-left-0 {
+  transform-origin:left;
+  transform: rotate(0deg);
+}
+
+.rotate-right-0 {
+  transform-origin:right;
+  transform: rotate(0deg);
+}
+
+
+/* ANIMATION */
+
+#header, #experience, #education, #skills, #languages, #work-details  {
+    -webkit-animation-duration: 3s;
+}
+#header .animated, #experience .animated, #education .animated, #skills .animated, #languages .animated, #work-details .animated{
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s
+}
+
+@keyframes blacken {
+    100% { background-color: black; }
+}
+
+
+@keyframes skillUp {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes rotateWords {
+    0% { opacity: 0; animation-timing-function: ease-in; height: 30px; }
+    8% { opacity: 1; height: 30px; }
+    19% { opacity: 1; height: 30px; }
+	25% { opacity: 0; height: 30px; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
